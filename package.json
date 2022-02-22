@@ -50,10 +50,10 @@
       "@testing-library/jest-native/extend-expect"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!@?(react-native|react-native-reanimated)/)"
+      "node_modules/(?!(jest-)?@?react-native|react-native-reanimated)"
     ],
     "setupFiles": [
-      "./jest-setup.js"
+      "<rootDir>/jest-setup.js"
     ]
   }
 }

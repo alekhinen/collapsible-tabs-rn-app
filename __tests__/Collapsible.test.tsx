@@ -3,8 +3,10 @@ import React from 'react';
 import {render} from '@testing-library/react-native';
 import Collapsible from '../Collapsible';
 
-it('should render a tab navigation', () => {
-  const {getByTestId} = render(<Collapsible />);
+import renderer from 'react-test-renderer';
 
-  expect(getByTestId('view-1')).toBeTruthy();
+it('should render a tab navigation', () => {
+  const inst = renderer.create(<Collapsible />);
+
+  expect(inst.root.findByProps({testID: 'view-1'})).not.toBeNull();
 });

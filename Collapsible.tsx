@@ -11,7 +11,7 @@ const Header = () => {
   return <View style={styles.header} />;
 };
 
-const Collapsible: React.FC = () => {
+const Example: React.FC = () => {
   const renderItem: ListRenderItem<number> = React.useCallback(({index}) => {
     return (
       <View
@@ -61,4 +61,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Collapsible;
+export default Example;
