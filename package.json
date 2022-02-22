@@ -11,12 +11,16 @@
   },
   "dependencies": {
     "react": "17.0.2",
-    "react-native": "0.67.2"
+    "react-native": "0.67.2",
+    "react-native-collapsible-tab-view": "^4.5.2",
+    "react-native-reanimated": "^2.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/jest-native": "^4.0.4",
+    "@testing-library/react-native": "^9.0.0",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.66.15",
     "@types/react-test-renderer": "^17.0.1",
@@ -41,6 +45,15 @@
       "jsx",
       "json",
       "node"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!@?(react-native|react-native-reanimated)/)"
+    ],
+    "setupFiles": [
+      "./jest-setup.js"
     ]
   }
 }
